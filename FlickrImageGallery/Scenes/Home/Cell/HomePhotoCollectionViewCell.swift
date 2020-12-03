@@ -12,6 +12,7 @@ class HomePhotoCollectionViewCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFit
         return image
     }()
     

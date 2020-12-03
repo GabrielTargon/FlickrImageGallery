@@ -13,7 +13,8 @@
 import UIKit
 
 protocol HomeDisplayLogic: class {
-    func displaySomething(viewModel: Home.Something.ViewModel)
+    func displayImages(viewModel: Home.ImagesArray.ViewModel)
+    func displayServiceErrorAlert()
 }
 
 class HomeViewController: UIViewController, HomeDisplayLogic {
@@ -24,21 +25,22 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
+        setupHome()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        setupHome()
     }
     
     // MARK: Setup
     
-    private func setup() {
+    private func setupHome() {
         let viewController = self
-        let interactor = HomeInteractor()
         let presenter = HomePresenter()
         let router = HomeRouter()
+        let worker = HomeWorker()
+        let interactor = HomeInteractor(presenter: presenter, worker: worker)
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -70,16 +72,41 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     
     @IBOutlet weak var collectionView: UICollectionView!
     let cellIdentifier = "photoCell"
+    let numberOfLoadingCells = 10
     let spacingBetweenItems:CGFloat = 5
+    var cellData = [FlickrImage]()
     
     func initialSetup() {
+        collectionViewSetup()
+        
+        interactor?.loadImagesArray(request: Home.ImagesArray.Request())
+    }
+    
+    func collectionViewSetup() {
+        let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        flowLayout.estimatedItemSize = .zero
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(HomePhotoCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
     }
     
-    func displaySomething(viewModel: Home.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    // MARK: HomeDisplayLogic
+    
+    func displayImages(viewModel: Home.ImagesArray.ViewModel) {
+        cellData = viewModel.images
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func displayServiceErrorAlert() {
+        let alert = UIAlertController(title: "Service Error", message: "Something went wrong. Would you like to try again?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in
+            self.interactor?.loadImagesArray(request: Home.ImagesArray.Request())
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -112,13 +139,24 @@ extension HomeViewController: UICollectionViewDelegate {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return cellData.count == 0 ? numberOfLoadingCells : cellData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! HomePhotoCollectionViewCell
         
-        return cell
+        if cellData.count == 0 {
+            return cell
+        } else {
+            let imageURL = cellData[indexPath.row].imageURLString()
+            interactor?.loadImage(request: Home.Image.Request(imageURL: imageURL), completion: { (image) in
+                DispatchQueue.main.async {
+                    cell.activityIndicator.stopAnimating()
+                    cell.imageView.image = image
+                }
+            })
+            return cell
+        }
     }
 }
 
@@ -134,4 +172,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         
         return spacingBetweenItems
     }
+    
+    
 }
