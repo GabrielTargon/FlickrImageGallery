@@ -19,8 +19,11 @@ protocol HomeWorkerLogic: class {
 }
 
 class HomeWorker: HomeWorkerLogic {
+    
+    // MARK: HomeWorkerLogic
+    
     func getFlickrImages(completion: @escaping (Result<Home.ImagesArray.Response, ServiceError>) -> Void) {
-        let request = NSMutableURLRequest(url: URL(string: "\(FlickrConstants.Flickr.APIHost)?method=\(FlickrConstants.FlickrParameterValues.SearchMethod)&format=\(FlickrConstants.FlickrParameterValues.ResponseFormat)&api_key=\(FlickrConstants.FlickrParameterValues.APIKey)&tags=kitten&page=1")!)
+        let request = NSMutableURLRequest(url: URL(string: FlickrConstants.Flickr.imagesArrayURL)!)
         
         let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
             if error != nil {

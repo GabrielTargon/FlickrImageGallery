@@ -99,34 +99,9 @@ class HomeViewController: UIViewController, HomeDisplayLogic {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//        selectedToDelete = selectedToDeleteFromIndexPath(collectionView.indexPathsForSelectedItems!)
-//        let cell = collectionView.cellForItem(at: indexPath)
-//
-//        DispatchQueue.main.async {
-//
-//            cell?.contentView.alpha = 0.5
-//        }
-//
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//
-//        selectedToDelete = selectedToDeleteFromIndexPath(collectionView.indexPathsForSelectedItems!)
-//        let cell = collectionView.cellForItem(at: indexPath)
-//
-//        DispatchQueue.main.async {
-//
-//            cell?.contentView.alpha = 1
-//
-//        }
-//
-//    }
-}
+// MARK: UICollectionViewDelegate and UICollectionViewDataSource
 
-extension HomeViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellData.count == 0 ? numberOfLoadingCells : cellData.count
     }
@@ -149,6 +124,8 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: UICollectionViewDelegateFlowLayout
+
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -161,6 +138,4 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         
         return spacingBetweenItems
     }
-    
-    
 }

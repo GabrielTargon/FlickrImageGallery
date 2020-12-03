@@ -20,7 +20,8 @@ protocol HomePresentationLogic {
 class HomePresenter: HomePresentationLogic {
     weak var viewController: HomeDisplayLogic?
     
-    // MARK: Present Images
+    // MARK: HomePresentationLogic
+    
     func presentImagesArray(response: Home.ImagesArray.Response) {
         let viewModel = Home.ImagesArray.ViewModel(images: response.images)
         viewController?.displayImages(viewModel: viewModel)

@@ -11,6 +11,7 @@ class FlickrConstants {
     
     struct Flickr {
         static let APIHost = "https://api.flickr.com/services/rest/"
+        static let imagesArrayURL = "\(Flickr.APIHost)?method=\(FlickrParameterValues.SearchMethod)&format=\(FlickrParameterValues.ResponseFormat)&api_key=\(FlickrParameterValues.APIKey)&tags=kitten&page=1"
     }
     
     struct FlickrParameterValues {

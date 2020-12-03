@@ -30,7 +30,8 @@ class HomeInteractor: HomeBusinessLogic, HomeDataStore {
         self.worker = worker
     }
     
-    // MARK: Load images
+    // MARK: HomeBusinessLogic
+    
     func loadImagesArray(request: Home.ImagesArray.Request) {
         worker.getFlickrImages { (result) in
             switch result {
