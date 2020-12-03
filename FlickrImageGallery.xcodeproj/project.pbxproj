@@ -11,8 +11,17 @@
 		B586BA9D257423B900C54D09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586BA9C257423B900C54D09 /* SceneDelegate.swift */; };
 		B586BAA4257423BA00C54D09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586BAA3257423BA00C54D09 /* Assets.xcassets */; };
 		B586BAA7257423BA00C54D09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B586BAA5257423BA00C54D09 /* LaunchScreen.storyboard */; };
-		B586BAB2257423BA00C54D09 /* FlickrImageGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586BAB1257423BA00C54D09 /* FlickrImageGalleryTests.swift */; };
-		B586BABD257423BA00C54D09 /* FlickrImageGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586BABC257423BA00C54D09 /* FlickrImageGalleryUITests.swift */; };
+		B5A1079D257920E200AA5652 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A10799257920E200AA5652 /* HomeViewControllerTests.swift */; };
+		B5A1079E257920E200AA5652 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1079A257920E200AA5652 /* HomeInteractorTests.swift */; };
+		B5A1079F257920E200AA5652 /* HomeWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1079B257920E200AA5652 /* HomeWorkerTests.swift */; };
+		B5A107A0257920E200AA5652 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A1079C257920E200AA5652 /* HomePresenterTests.swift */; };
+		B5A107A9257922AE00AA5652 /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A107A8257922AE00AA5652 /* HomePresenterSpy.swift */; };
+		B5A107B12579238E00AA5652 /* HomeViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A107B02579238E00AA5652 /* HomeViewControllerSpy.swift */; };
+		B5A107B6257923EB00AA5652 /* HomeInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A107B5257923EB00AA5652 /* HomeInteractorSpy.swift */; };
+		B5A107BB2579244B00AA5652 /* HomeWorkerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A107BA2579244B00AA5652 /* HomeWorkerSpy.swift */; };
+		B5A107C0257924D100AA5652 /* HomeDataProviderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A107BF257924D100AA5652 /* HomeDataProviderSpy.swift */; };
+		B5A107C62579259B00AA5652 /* HomeSeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A107C52579259B00AA5652 /* HomeSeeds.swift */; };
+		B5A107D52579917E00AA5652 /* ServiceErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A107D42579917E00AA5652 /* ServiceErrorTests.swift */; };
 		B5CA91A325742B4D00D65B66 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA919D25742B4D00D65B66 /* HomePresenter.swift */; };
 		B5CA91A425742B4D00D65B66 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA919E25742B4D00D65B66 /* HomeWorker.swift */; };
 		B5CA91A525742B4D00D65B66 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA919F25742B4D00D65B66 /* HomeRouter.swift */; };
@@ -35,13 +44,6 @@
 			remoteGlobalIDString = B586BA96257423B900C54D09;
 			remoteInfo = FlickrImageGallery;
 		};
-		B586BAB9257423BA00C54D09 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B586BA8F257423B900C54D09 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B586BA96257423B900C54D09;
-			remoteInfo = FlickrImageGallery;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -53,11 +55,18 @@
 		B586BAA6257423BA00C54D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B586BAA8257423BA00C54D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B586BAAD257423BA00C54D09 /* FlickrImageGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrImageGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B586BAB1257423BA00C54D09 /* FlickrImageGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageGalleryTests.swift; sourceTree = "<group>"; };
 		B586BAB3257423BA00C54D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B586BAB8257423BA00C54D09 /* FlickrImageGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrImageGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B586BABC257423BA00C54D09 /* FlickrImageGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImageGalleryUITests.swift; sourceTree = "<group>"; };
-		B586BABE257423BA00C54D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A10799257920E200AA5652 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		B5A1079A257920E200AA5652 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
+		B5A1079B257920E200AA5652 /* HomeWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkerTests.swift; sourceTree = "<group>"; };
+		B5A1079C257920E200AA5652 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		B5A107A8257922AE00AA5652 /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
+		B5A107B02579238E00AA5652 /* HomeViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpy.swift; sourceTree = "<group>"; };
+		B5A107B5257923EB00AA5652 /* HomeInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorSpy.swift; sourceTree = "<group>"; };
+		B5A107BA2579244B00AA5652 /* HomeWorkerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkerSpy.swift; sourceTree = "<group>"; };
+		B5A107BF257924D100AA5652 /* HomeDataProviderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataProviderSpy.swift; sourceTree = "<group>"; };
+		B5A107C52579259B00AA5652 /* HomeSeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSeeds.swift; sourceTree = "<group>"; };
+		B5A107D42579917E00AA5652 /* ServiceErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceErrorTests.swift; sourceTree = "<group>"; };
 		B5CA919D25742B4D00D65B66 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		B5CA919E25742B4D00D65B66 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
 		B5CA919F25742B4D00D65B66 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -86,13 +95,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B586BAB5257423BA00C54D09 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,7 +103,6 @@
 			children = (
 				B586BA99257423B900C54D09 /* FlickrImageGallery */,
 				B586BAB0257423BA00C54D09 /* FlickrImageGalleryTests */,
-				B586BABB257423BA00C54D09 /* FlickrImageGalleryUITests */,
 				B586BA98257423B900C54D09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,7 +112,6 @@
 			children = (
 				B586BA97257423B900C54D09 /* FlickrImageGallery.app */,
 				B586BAAD257423BA00C54D09 /* FlickrImageGalleryTests.xctest */,
-				B586BAB8257423BA00C54D09 /* FlickrImageGalleryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,19 +133,60 @@
 		B586BAB0257423BA00C54D09 /* FlickrImageGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
-				B586BAB1257423BA00C54D09 /* FlickrImageGalleryTests.swift */,
+				B5A107D32579916700AA5652 /* Utils */,
+				B5A10797257920AC00AA5652 /* Scenes */,
 				B586BAB3257423BA00C54D09 /* Info.plist */,
 			);
 			path = FlickrImageGalleryTests;
 			sourceTree = "<group>";
 		};
-		B586BABB257423BA00C54D09 /* FlickrImageGalleryUITests */ = {
+		B5A10797257920AC00AA5652 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B586BABC257423BA00C54D09 /* FlickrImageGalleryUITests.swift */,
-				B586BABE257423BA00C54D09 /* Info.plist */,
+				B5A10798257920B500AA5652 /* Home */,
 			);
-			path = FlickrImageGalleryUITests;
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B5A10798257920B500AA5652 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B5A107C42579258800AA5652 /* Seeds */,
+				B5A107A72579227800AA5652 /* Spies */,
+				B5A10799257920E200AA5652 /* HomeViewControllerTests.swift */,
+				B5A1079A257920E200AA5652 /* HomeInteractorTests.swift */,
+				B5A1079B257920E200AA5652 /* HomeWorkerTests.swift */,
+				B5A1079C257920E200AA5652 /* HomePresenterTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B5A107A72579227800AA5652 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				B5A107A8257922AE00AA5652 /* HomePresenterSpy.swift */,
+				B5A107B02579238E00AA5652 /* HomeViewControllerSpy.swift */,
+				B5A107B5257923EB00AA5652 /* HomeInteractorSpy.swift */,
+				B5A107BA2579244B00AA5652 /* HomeWorkerSpy.swift */,
+				B5A107BF257924D100AA5652 /* HomeDataProviderSpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		B5A107C42579258800AA5652 /* Seeds */ = {
+			isa = PBXGroup;
+			children = (
+				B5A107C52579259B00AA5652 /* HomeSeeds.swift */,
+			);
+			path = Seeds;
+			sourceTree = "<group>";
+		};
+		B5A107D32579916700AA5652 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B5A107D42579917E00AA5652 /* ServiceErrorTests.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B5CA91C825743F4E00D65B66 /* Utils */ = {
@@ -236,24 +277,6 @@
 			productReference = B586BAAD257423BA00C54D09 /* FlickrImageGalleryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B586BAB7257423BA00C54D09 /* FlickrImageGalleryUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B586BAC7257423BA00C54D09 /* Build configuration list for PBXNativeTarget "FlickrImageGalleryUITests" */;
-			buildPhases = (
-				B586BAB4257423BA00C54D09 /* Sources */,
-				B586BAB5257423BA00C54D09 /* Frameworks */,
-				B586BAB6257423BA00C54D09 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B586BABA257423BA00C54D09 /* PBXTargetDependency */,
-			);
-			name = FlickrImageGalleryUITests;
-			productName = FlickrImageGalleryUITests;
-			productReference = B586BAB8257423BA00C54D09 /* FlickrImageGalleryUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,10 +290,6 @@
 						CreatedOnToolsVersion = 12.1;
 					};
 					B586BAAC257423BA00C54D09 = {
-						CreatedOnToolsVersion = 12.1;
-						TestTargetID = B586BA96257423B900C54D09;
-					};
-					B586BAB7257423BA00C54D09 = {
 						CreatedOnToolsVersion = 12.1;
 						TestTargetID = B586BA96257423B900C54D09;
 					};
@@ -291,7 +310,6 @@
 			targets = (
 				B586BA96257423B900C54D09 /* FlickrImageGallery */,
 				B586BAAC257423BA00C54D09 /* FlickrImageGalleryTests */,
-				B586BAB7257423BA00C54D09 /* FlickrImageGalleryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -308,13 +326,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B586BAAB257423BA00C54D09 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B586BAB6257423BA00C54D09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,15 +359,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B586BAB2257423BA00C54D09 /* FlickrImageGalleryTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B586BAB4257423BA00C54D09 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B586BABD257423BA00C54D09 /* FlickrImageGalleryUITests.swift in Sources */,
+				B5A1079E257920E200AA5652 /* HomeInteractorTests.swift in Sources */,
+				B5A107B6257923EB00AA5652 /* HomeInteractorSpy.swift in Sources */,
+				B5A107A9257922AE00AA5652 /* HomePresenterSpy.swift in Sources */,
+				B5A107C0257924D100AA5652 /* HomeDataProviderSpy.swift in Sources */,
+				B5A1079F257920E200AA5652 /* HomeWorkerTests.swift in Sources */,
+				B5A107C62579259B00AA5652 /* HomeSeeds.swift in Sources */,
+				B5A107B12579238E00AA5652 /* HomeViewControllerSpy.swift in Sources */,
+				B5A107A0257920E200AA5652 /* HomePresenterTests.swift in Sources */,
+				B5A107BB2579244B00AA5652 /* HomeWorkerSpy.swift in Sources */,
+				B5A107D52579917E00AA5652 /* ServiceErrorTests.swift in Sources */,
+				B5A1079D257920E200AA5652 /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,11 +380,6 @@
 			isa = PBXTargetDependency;
 			target = B586BA96257423B900C54D09 /* FlickrImageGallery */;
 			targetProxy = B586BAAE257423BA00C54D09 /* PBXContainerItemProxy */;
-		};
-		B586BABA257423BA00C54D09 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B586BA96257423B900C54D09 /* FlickrImageGallery */;
-			targetProxy = B586BAB9257423BA00C54D09 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -593,46 +601,6 @@
 			};
 			name = Release;
 		};
-		B586BAC8257423BA00C54D09 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SGK9UE4P7G;
-				INFOPLIST_FILE = FlickrImageGalleryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = gabrieltargon.FlickrImageGalleryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlickrImageGallery;
-			};
-			name = Debug;
-		};
-		B586BAC9257423BA00C54D09 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SGK9UE4P7G;
-				INFOPLIST_FILE = FlickrImageGalleryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = gabrieltargon.FlickrImageGalleryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlickrImageGallery;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -659,15 +627,6 @@
 			buildConfigurations = (
 				B586BAC5257423BA00C54D09 /* Debug */,
 				B586BAC6257423BA00C54D09 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B586BAC7257423BA00C54D09 /* Build configuration list for PBXNativeTarget "FlickrImageGalleryUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B586BAC8257423BA00C54D09 /* Debug */,
-				B586BAC9257423BA00C54D09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
